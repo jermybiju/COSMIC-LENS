@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmic Lens - NASA APOD Viewer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<div class="stars-bg"></div>
+
+<main class="app">
+<header class="header">
+<div class="logo">
+<span class="logo-icon">✦</span>
+<span class="logo-text">COSMIC LENS</span>
+</div>
+<p class="tagline">a daily look at our universe, powered by NASA</p>
+</header>
+
+<section class="controls">
+<div class="control-group">
+<label for="datePicker">pick a date</label>
+<input type="date" id="datePicker">
+</div>
+<button id="randomBtn" class="btn btn-secondary">random</button>
+<button id="todayBtn" class="btn btn-secondary">today</button>
+<button id="favBtn" class="btn btn-fav" title="save to favorites">☆</button>
+</section>
+
+<section class="apod-card" id="apodCard">
+<div class="loading" id="loading">
+<div class="spinner"></div>
+<p>fetching from NASA...</p>
+</div>
+</section>
+
+<section class="favorites-section">
+<h2 class="section-title">your favorites</h2>
+<div class="favorites-grid" id="favoritesGrid">
+<p class="empty-state">no favorites yet. click the star to save images you love.</p>
+</div>
+</section>
+
+<footer class="footer">
+<p>built with the NASA APOD API · <a href="https://api.nasa.gov" target="_blank">api.nasa.gov</a></p>
+</footer>
+</main>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
