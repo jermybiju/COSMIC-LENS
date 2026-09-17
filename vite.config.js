@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/cosmic-lens/',
+  base: '/COSMIC-LENS/',
   build: {
     outDir: 'dist',
   }
