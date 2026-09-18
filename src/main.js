@@ -4,10 +4,20 @@ const API_URL = 'https://api.nasa.gov/planetary/apod'
 
 
 const apodCard = document.getElementById('apodCard')
+
 const datePicker = document.getElementById('datePicker')
+
 const randomBtn = document.getElementById('randomBtn')
+
 const todayBtn = document.getElementById('todayBtn')
+
 const favBtn = document.getElementById('favBtn')
+
+const prevBtn = document.getElementById('prevBtn')
+
+const nextBtn = document.getElementById('nextBtn')
+
+const shareBtn = document.getElementById('shareBtn')
 const favoritesGrid = document.getElementById('favoritesGrid')
 
 
@@ -33,7 +43,8 @@ const data = await response.json()
 currentApod = data
 renderApod(data)
 updateFavButton()
-} catch (error) {
+} 
+catch (error) {
 showError(error.message)
 
 }
@@ -183,3 +194,65 @@ favBtn.addEventListener('click', toggleFavorite)
 
 renderFavorites()
 fetchAPOD(today)
+
+
+function formatLocalDate(date) {
+
+const y = date.getFullYear()
+const m = String(date.getMonth() + 1).padStart(2, '0')
+const d = String(date.getDate()).padStart(2, '0')
+return y + '-' + m + '-' + d
+
+}
+
+
+prevBtn.addEventListener('click', () => {
+if (!currentApod) return
+const current = new Date(currentApod.date + 'T12:00:00')
+current.setDate(current.getDate() - 1)
+const newDate = formatLocalDate(current)
+
+
+if (newDate < '1995-06-16') return
+datePicker.value = newDate
+fetchAPOD(newDate)
+
+})
+
+
+
+nextBtn.addEventListener('click', () => {
+if (!currentApod) return
+
+const current = new Date(currentApod.date + 'T12:00:00')
+current.setDate(current.getDate() + 1)
+
+const newDate = formatLocalDate(current)
+
+if (newDate > today) return
+datePicker.value = newDate
+fetchAPOD(newDate)
+})
+
+
+
+shareBtn.addEventListener('click', () => {
+if (!currentApod) return
+const url = window.location.origin + window.location.pathname + '?date=' + currentApod.date
+
+
+navigator.clipboard.writeText(url).then(() => {
+shareBtn.textContent = 'copied!'
+setTimeout(() => { shareBtn.textContent = 'share' }, 1500)
+}).catch(() => {
+alert('couldnt copy link')
+})
+})
+
+const urlParams = new URLSearchParams(window.location.search)
+const urlDate = urlParams.get('date')
+if (urlDate) {
+
+datePicker.value = urlDate
+fetchAPOD(urlDate)
+}
