@@ -40,6 +40,6 @@ made it for the Stardance "Give Your Website a Pulse" mission. wanted something 
 - Email: [jermybiju@gmail.com](mailto:jermybiju00@gmail.com)
 - Instagram: [@jermy.biju](https://instagram.com/jer_my_bi_ju/)
 
-## Built byhttps://www.instagram.com/jer_my_bi_ju/?__pwa=1#
+## Built by
 
 Jermy Biju - Stardance 'Give Your Website a Pulse' Challenge
