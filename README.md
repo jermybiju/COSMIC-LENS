@@ -37,9 +37,9 @@ made it for the Stardance "Give Your Website a Pulse" mission. wanted something 
 ## Contact
 
 - GitHub: [@jermybiju](https://github.com/jermybiju)
-- Email: [jermybiju@gmail.com](mailto:jermybiju@gmail.com)
-- Instagram: [@jermy.biju](https://instagram.com/jermy.biju)
+- Email: [jermybiju@gmail.com](mailto:jermybiju00@gmail.com)
+- Instagram: [@jermy.biju](https://instagram.com/jer_my_bi_ju/)
 
-## Built by
+## Built byhttps://www.instagram.com/jer_my_bi_ju/?__pwa=1#
 
 Jermy Biju - Stardance 'Give Your Website a Pulse' Challenge
