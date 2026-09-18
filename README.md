@@ -31,8 +31,8 @@ made it for the Stardance "Give Your Website a Pulse" mission. wanted something 
 ## What was tricky
 
 1. Getting the API key to work with Vite. The `.env` variable needs a `VITE_` prefix or it won't be exposed to the browser.
-2, Timezone bug in prev/next navigation. `toISOString()` uses UTC, and since I'm in IST it was jumping 2 days back. Fixed with a local date helper.
-3, Tried adding a download button but hit a CORS issue. Browsers block downloading images from external domains. Removed it instead of shipping a broken feature
+2. Timezone bug in prev/next navigation. `toISOString()` uses UTC, and since I'm in IST it was jumping 2 days back. Fixed with a local date helper.
+3. Tried adding a download button but hit a CORS issue. Browsers block downloading images from external domains. Removed it instead of shipping a broken feature
 
 ## Contact
 
