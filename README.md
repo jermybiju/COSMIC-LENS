@@ -42,4 +42,4 @@ made it for the Stardance "Give Your Website a Pulse" mission. wanted something 
 
 ## Built by
 
-Jermy Biju - Stardance WebOS Challenge
+Jermy Biju - Stardance 'Give Your Website a Pulse' Challenge
