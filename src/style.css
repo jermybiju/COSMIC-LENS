@@ -4,34 +4,14 @@ padding: 0;
 box-sizing: border-box;
 }
 
-
-:root {
-
---bg: black;
---bg-card: #0f0f1e;
---border: #1f1f35;
---text: #e8e8f5;
---muted: gray;
---accent: mediumpurple;
---gold: gold;
-
-}
-
-
-html, body {
-
-min-height: 100%;
-background: var(--bg);
-color: var(--text);
+body {
+background: #0a0a14;
+color: #e8e8f5;
 font-family: 'Space Grotesk', sans-serif;
-overflow-x: hidden;
-
-
+min-height: 100vh;
 }
-
 
 .stars-bg {
-
 position: fixed;
 top: 0;
 left: 0;
@@ -40,183 +20,111 @@ height: 100%;
 z-index: 0;
 pointer-events: none;
 background-image:
-radial-gradient(3px 3px at 20px 30px, white, transparent),
-
-radial-gradient(3px 3px at 40px 70px, white, transparent),
-
-radial-gradient(3px 3px at 50px 160px, white, transparent),
-
-radial-gradient(3px 3px at 90px 40px, white, transparent),
-
-radial-gradient(3px 3px at 130px 80px, white, transparent),
-
-radial-gradient(3px 3px at 160px 120px, white, transparent),
-
-radial-gradient(2px 2px at 50px 50px, white, transparent),
-
-radial-gradient(2px 2px at 100px 30px, white, transparent),
-
-radial-gradient(2px 2px at 150px 50px, white, transparent),
-
-radial-gradient(2px 2px at 30px 100px, white, transparent),
-
-radial-gradient(2px 2px at 80px 130px, white, transparent),
-
-radial-gradient(2px 2px at 130px 160px, white, transparent);
-background-size: 200px 200px;
-animation: twinkle 5s ease-in-out infinite;
-
+radial-gradient(2px 2px at 30px 40px, #fff, transparent),
+radial-gradient(2px 2px at 90px 80px, #fff, transparent),
+radial-gradient(2px 2px at 150px 30px, #fff, transparent),
+radial-gradient(2px 2px at 60px 120px, #fff, transparent),
+radial-gradient(2px 2px at 180px 150px, #fff, transparent),
+radial-gradient(1px 1px at 20px 70px, #fff, transparent),
+radial-gradient(1px 1px at 110px 100px, #fff, transparent),
+radial-gradient(1px 1px at 200px 60px, #fff, transparent);
+background-size: 220px 220px;
+opacity: 0.5;
 }
-
-@keyframes twinkle {
-
-
-0%, 100% { opacity: 0.5; }
-50% { opacity: 0.8; }
-
-}
-
 
 .app {
-
 position: relative;
 z-index: 1;
-
-max-width: 900px;
-
+max-width: 850px;
 margin: auto;
 padding: 40px 16px 60px;
-
 }
-
 
 .header {
 text-align: center;
-margin-bottom: 40px;
-
-}
-
-.logo {
-
-display: flex;
-
-align-items: center;
-justify-content: center;
-gap: 10px;
-margin-bottom: 10px;
-
+margin-bottom: 35px;
 }
 
 .logo-text {
-
 font-family: 'Orbitron', sans-serif;
-font-size: 28px;
-font-weight: 700;
-letter-spacing: 4px;
-background: linear-gradient(135deg, #fff, mediumpurple);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-
+font-size: 26px;
+letter-spacing: 5px;
+color: #fff;
 }
 
 .tagline {
-
-color: gray;
-
+color: #808090;
 font-size: 13px;
-
-letter-spacing: 0.5px;
-
+margin-top: 6px;
 }
 
 .controls {
-
 display: flex;
-gap: 10px;
-margin-bottom: 24px;
+gap: 8px;
+margin-bottom: 20px;
 flex-wrap: wrap;
 align-items: flex-end;
-
 }
 
 .control-group {
-
 display: flex;
 flex-direction: column;
 gap: 4px;
-flex: 1;
-min-width: 180px;
-
 }
 
 .control-group label {
-
 font-size: 11px;
-color: gray;
+color: #808090;
 text-transform: uppercase;
-letter-spacing: 1px;
-
 }
 
 input[type="date"] {
-
-background: #0f0f1e;
-border: 1px solid #1f1f35;
+background: #14142a;
+border: 1px solid #2a2a45;
 color: #e8e8f5;
-padding: 10px 12px;
-border-radius: 8px;
+padding: 9px 12px;
+border-radius: 6px;
 font-family: inherit;
-font-size: 13px;
 outline: none;
-cursor: pointer;
-
 }
-
-
 
 input[type="date"]::-webkit-calendar-picker-indicator {
 filter: invert(1);
 cursor: pointer;
-
+opacity: 0.7;
 }
 
-
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+opacity: 1;
+}
 
 input[type="date"]:focus {
+border-color: #9b6bff;
+}
 
-border-color: mediumpurple;
-
+input[type="date"]:focus {
+border-color: #9b6bff;
 }
 
 .btn {
-
-border: 1px solid var(--border);
-background: var(--bg-card);
-color: var(--text);
-padding: 10px 18px;
-border-radius: 8px;
+border: 1px solid #2a2a45;
+background: #14142a;
+color: #e8e8f5;
+padding: 9px 16px;
+border-radius: 6px;
 font-family: inherit;
-
 font-size: 13px;
-font-weight: 500;
 cursor: pointer;
-transition: 0.2s;
 }
-
-
 
 .btn:hover {
-border-color: mediumpurple;
-color: mediumpurple;
-
+border-color: #9b6bff;
+color: #9b6bff;
 }
 
-
 .btn-fav {
-font-size: 18px;
-padding: 8px 14px;
-
+font-size: 17px;
+padding: 7px 13px;
 }
 
 .btn-fav.active {
@@ -224,230 +132,126 @@ color: gold;
 border-color: gold;
 }
 
-
 .apod-card {
-background: #0f0f1e;
-border: 1px solid #141424;
-border-radius: 16px;
+background: #14142a;
+border: 1px solid #2a2a45;
+border-radius: 14px;
 overflow: hidden;
-margin-bottom: 40px;
-min-height: 300px;
-display: flex;
-flex-direction: column;
-transition: border-color 0.3s;
+margin-bottom: 35px;
+min-height: 280px;
 }
-
-
-.apod-card:hover {
-
-border-color: mediumpurple;
-}
-
-
 
 .loading {
-
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 16px;
 padding: 80px 20px;
-color: gray;
+text-align: center;
+color: #808090;
 font-size: 13px;
-
 }
-
-.spinner {
-
-width: 32px;
-height: 32px;
-border: 3px solid #1f1f35;
-border-top-color: mediumpurple;
-border-radius: 50%;
-animation: spin 0.8s linear infinite;
-
-}
-
-@keyframes spin {
-
-to { transform: rotate(360deg); }
-
-}
-
-
-.apod-image-wrap {
-
-position: relative;
-width: 100%;
-background: black;
-
-
-}
-
-
-
 
 .apod-image {
-
-
 width: 100%;
 display: block;
 max-height: 500px;
 object-fit: contain;
-
 }
 
-
-
 .apod-video {
-
-
 width: 100%;
 aspect-ratio: 16/9;
 display: block;
 border: 0;
-
 }
-
-
-
 
 .apod-info {
-padding: 24px;
+padding: 22px;
 }
 
-
-
-
 .apod-date {
-
 font-size: 11px;
-
-color: mediumpurple;
+color: #9b6bff;
 text-transform: uppercase;
 letter-spacing: 2px;
 margin-bottom: 8px;
-font-weight: 600;
-
 }
 
 .apod-title {
-
 font-family: 'Orbitron', sans-serif;
-font-size: 22px;
-font-weight: 600;
+font-size: 20px;
 margin-bottom: 12px;
 line-height: 1.3;
-
 }
 
 .apod-explanation {
-
-color: gray;
+color: #a0a0b0;
 font-size: 14px;
 line-height: 1.7;
-
-
 }
 
 .apod-copyright {
-
-margin-top: 12px;
+margin-top: 10px;
 font-size: 11px;
-color: gray;
+color: #707080;
 font-style: italic;
-
 }
 
 .section-title {
-
 font-family: 'Orbitron', sans-serif;
-font-size: 16px;
-font-weight: 600;
+font-size: 14px;
 text-transform: uppercase;
 letter-spacing: 2px;
-margin-bottom: 16px;
-color: #e8e8f5;
-
+margin-bottom: 14px;
 }
 
 .favorites-grid {
-
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-gap: 12px;
-
+grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+gap: 10px;
 }
 
 .fav-card {
-
 position: relative;
 aspect-ratio: 1;
-
-border-radius: 10px;
+border-radius: 8px;
 overflow: hidden;
-
 cursor: pointer;
-border: 1px solid #1f1f35;
-
-background: black;
-transition: 0.2s;
-
+border: 1px solid #2a2a45;
+background: #000;
 }
 
 .fav-card:hover {
-
-border-color: mediumpurple;
-transform: translateY(-2px);
-
+border-color: #9b6bff;
 }
 
-
 .fav-card img {
-
 width: 100%;
 height: 100%;
 object-fit: cover;
-
 }
 
-
 .fav-card .fav-date {
-
 position: absolute;
 bottom: 0;
 left: 0;
 right: 0;
-
-padding: 6px 8px;
-background: linear-gradient(transparent, black);
-
+padding: 5px 8px;
+background: rgba(0,0,0,0.7);
 font-size: 10px;
-color: white;
-
+color: #fff;
 }
 
 .fav-remove {
 position: absolute;
-
-top: 6px;
-right: 6px;
-width: 22px;
-height: 22px;
-
+top: 5px;
+right: 5px;
+width: 20px;
+height: 20px;
 border-radius: 50%;
-background: crimson;
-
-color: white;
+background: #dc143c;
+color: #fff;
 border: 0;
 cursor: pointer;
-font-size: 14px;
-
-line-height: 1;
+font-size: 13px;
 opacity: 0;
-
-transition: 0.15s;
 }
 
 .fav-card:hover .fav-remove {
@@ -455,54 +259,31 @@ opacity: 1;
 }
 
 .empty-state {
-color: gray;
+color: #808090;
 font-size: 13px;
-
 padding: 20px;
-border: 1px dashed #1f1f35;
-border-radius: 10px;
-grid-column: 1 / -1;
+border: 1px dashed #2a2a45;
+border-radius: 8px;
 text-align: center;
 }
-
 
 .footer {
 text-align: center;
 margin-top: 40px;
-padding-top: 24px;
-border-top: 1px solid #1f1f35;
-color: gray;
+padding-top: 20px;
+border-top: 1px solid #2a2a45;
+color: #808090;
 font-size: 12px;
+line-height: 1.8;
 }
-
 
 .footer a {
-color: mediumpurple;
-text-decoration: none;
+color: #9b6bff;
 }
-
-.footer a:hover {
-text-decoration: underline;
-}
-
-/* mobile */
 
 @media (max-width: 600px) {
-.logo-text {
-font-size: 20px;
-letter-spacing: 2px;
-}
-.apod-title {
-font-size: 18px;
-}
-.apod-info {
-padding: 18px;
-}
-.controls {
-flex-direction: column;
-}
-.controls .btn {
-
-width: 100%;
-}
+.logo-text { font-size: 20px; letter-spacing: 3px; }
+.apod-title { font-size: 17px; }
+.controls { flex-direction: column; }
+.controls .btn { width: 100%; }
 }
